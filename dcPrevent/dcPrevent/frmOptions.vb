@@ -112,7 +112,7 @@ Namespace dcPrevent
 
         Private Sub HookManager_Supress(sender As Object, e As MouseEventExtArgs)
             If e.Button = 1048576 Then
-                If s.ElapsedMilliseconds < 50 And s.IsRunning And chkFilterDoubleClicks.Checked Then
+                If s.ElapsedMilliseconds < 100 And s.IsRunning And chkFilterDoubleClicks.Checked Then
                     e.Handled = True
                     Log(String.Format("Suppressed a DC" & vbTab & vbTab & " {0}" & vbLf, e.Button))
                     s.Reset()
